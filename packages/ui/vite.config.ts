@@ -5,7 +5,7 @@ export default defineConfig({
   build: {
     lib: {
       entry: {
-        'lib': 'src/index.ts',
+        'index': 'src/index.ts',
         'styles/mk-style': 'src/styles/index.ts'
       },
       formats: ['es'],

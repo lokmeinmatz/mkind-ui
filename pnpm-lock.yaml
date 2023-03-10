@@ -14,15 +14,15 @@ importers:
 
   apps/web:
     specifiers:
+      '@lokmeinmatz/my-ui': workspace:*
       '@types/node': ^17.0.12
       eslint: 7.32.0
       eslint-config-custom: workspace:*
       tsconfig: workspace:*
       typescript: ^4.5.3
-      ui: workspace:*
       vite: ^4.1.0
     dependencies:
-      ui: link:../../packages/ui
+      '@lokmeinmatz/my-ui': link:../../packages/ui
     devDependencies:
       '@types/node': 17.0.45
       eslint: 7.32.0

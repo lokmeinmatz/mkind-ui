@@ -1,13 +1,12 @@
 {
-  "name": "ui",
-  "private": true,
-  "version": "0.0.0",
+  "name": "@lokmeinmatz/my-ui",
+  "version": "0.0.1",
   "type": "module",
   "exports": {
     "./style.css": "./dist/style.css",
-    ".": "./dist/lib.js"
+    ".": "./dist/index.js"
   },
-  "types": "types/my-element.d.ts",
+  "types": "types/index.d.ts",
   "files": [
     "dist",
     "types"
