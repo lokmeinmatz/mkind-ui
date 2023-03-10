@@ -26,10 +26,6 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: packages-ui-dist
-      - name: Validate and extract release information
-        working-directory: ./packages/ui
-        id: release
-        uses: manovotny/github-releases-for-automated-package-publishing-action@v2.0.1
       - uses: actions/setup-node@v3
         with:
           always-auth: true
@@ -42,14 +38,7 @@ jobs:
           version: 7
           run_install: false
       - name: Publish normal
-        if: steps.release.outputs.tag == ''
         working-directory: ./packages/ui
-        run: pnpm publish -r
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
-      - name: Publish tagged
-        if: steps.release.outputs.tag != ''
-        working-directory: ./packages/ui
-        run: pnpm publish -r --tag ${{ steps.release.outputs.tag }}
+        run: pnpm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
