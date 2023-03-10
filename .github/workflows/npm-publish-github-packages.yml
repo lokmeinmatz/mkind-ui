@@ -44,6 +44,7 @@ jobs:
       - name: Publish normal
         if: steps.release.outputs.tag == ''
         working-directory: ./packages/ui
+        run: pnpm publish -r
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
       - name: Publish tagged
