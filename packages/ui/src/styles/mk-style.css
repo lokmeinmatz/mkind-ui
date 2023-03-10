@@ -1,0 +1,38 @@
+@import url(./mk-btn.css);
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,700;1,300&display=swap');
+
+:root {
+  --mk-primary: #ffaa00;
+  --mk-secondary: #8b5d00;
+  --mk-background: #222;
+  --mk-text-primary: #ffffff;
+  --mk-text-secondary: #aaa;
+
+  color: var(--mk-text-primary);
+  font-family: 'Roboto', sans-serif;
+}
+
+html > body {
+  margin: 0;
+  background-color: var(--mk-background);
+}
+
+mk-appbar ul[slot=navigation] {
+  list-style: none;
+  display: flex;
+  gap: 1em;
+}
+
+mk-appbar.is-mobile ul[slot=navigation] {
+  flex-direction: column;
+}
+
+mk-appbar ul[slot=navigation] > li {
+  display: flex;
+  align-items: center;
+}
+
+mk-appbar ul[slot=navigation]>li a {
+  color: var(--mk-text-primary);
+  text-decoration: none;
+}

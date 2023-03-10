@@ -1,19 +1,28 @@
 {
   "name": "ui",
+  "private": true,
   "version": "0.0.0",
-  "main": "./index.tsx",
-  "types": "./index.tsx",
-  "license": "MIT",
+  "type": "module",
+  "exports": {
+    "./style.css": "./dist/style.css",
+    ".": "./dist/lib.js"
+  },
+  "types": "types/my-element.d.ts",
+  "files": [
+    "dist",
+    "types"
+  ],
   "scripts": {
-    "lint": "eslint *.ts*"
+    "dev": "vite",
+    "preview": "vite preview",
+    "build": "tsc && vite build"
+  },
+  "dependencies": {
+    "lit": "^2.6.1"
   },
   "devDependencies": {
-    "@types/react": "^18.0.17",
-    "@types/react-dom": "^18.0.6",
-    "eslint": "^7.32.0",
-    "eslint-config-custom": "workspace:*",
-    "react": "^18.2.0",
-    "tsconfig": "workspace:*",
-    "typescript": "^4.5.2"
+    "feather-icons": "^4.29.0",
+    "typescript": "^4.9.3",
+    "vite": "^4.1.0"
   }
 }

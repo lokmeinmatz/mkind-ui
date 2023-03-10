@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + Lit + TS</title>
+    <link rel="stylesheet" href="./src/styles/mk-style.css" />
+    <script type="module" src="/src/mk-appbar.ts"></script>
+    <style>
+      html > body {
+        margin: 0;
+        background-color: var(--mk-background);
+      }
+    </style>
+  </head>
+  <body>
+    <mk-appbar>
+      <ul slot="navigation">
+        <li><a class="mk-btn" href="#/test">Test</a></li>
+        <li><a class="mk-btn" href="#/stats">Stats</a></li>
+        <li><a class="mk-btn" href="https://google.com">Google</a></li>
+      </ul>
+    </mk-appbar>
+  </body>
+</html>
