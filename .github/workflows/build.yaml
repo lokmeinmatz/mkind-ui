@@ -44,4 +44,4 @@ jobs:
         with:
           name: packages/ui/dist
           path: |
-            packages/ui/dist
+            packages-ui-dist
